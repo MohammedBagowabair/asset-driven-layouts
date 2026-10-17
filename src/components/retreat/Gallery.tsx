@@ -58,9 +58,9 @@ export function Gallery() {
       {index !== null && (
         <div role="dialog" aria-modal="true" aria-label="Image viewer" className="fixed inset-0 z-[60] flex items-center justify-center bg-overlay/95 p-4 text-on-image animate-in fade-in" onClick={close}>
           <figure className="relative max-h-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
-            <img src={gallery[index].src} alt={gallery[index].alt} className="max-h-[80vh] w-auto object-contain" />
+            <img src={gallery[index]!.src} alt={gallery[index]!.alt} className="max-h-[80vh] w-auto object-contain" />
             <figcaption className="mt-4 flex justify-between gap-4 text-sm opacity-80">
-              <span>{gallery[index].alt}</span><span>{index + 1} / {n}</span>
+              <span>{gallery[index]!.alt}</span><span>{index + 1} / {n}</span>
             </figcaption>
           </figure>
           <button ref={closeRef} type="button" onClick={close} aria-label="Close image viewer" className="absolute right-4 top-4 p-3 hover:opacity-70"><X className="h-7 w-7" /></button>
