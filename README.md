@@ -1,24 +1,25 @@
-# Asset Driven Layouts
+# Autumn Rise
 
-Implement exactly the screenshot and nothing else
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/53885d30-5593-485b-bd02-3ece8a34f59d).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+A demonstration page for a yoga and wellbeing retreat in Mallorca. The site is a static TanStack Start build published with GitHub Pages at [https://mohammedbagowabair.github.io/asset-driven-layouts/](https://mohammedbagowabair.github.io/asset-driven-layouts/).
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requires [Bun](https://bun.sh) (the lockfile is `bun.lock`). Node.js 22 also works for the Vite build.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+bun install
+bun run dev
 ```
+
+The dev server uses the GitHub Pages base path, so open `http://localhost:8080/asset-driven-layouts/`.
+
+```sh
+bun run build
+bun run test
+```
+
+## GitHub Pages
+
+Pushes to `main` run `.github/workflows/deploy.yml`, which builds the site and deploys it with the official Pages actions. The same build is also published to the `gh-pages` branch.
+
+In the repository settings, open **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**.
